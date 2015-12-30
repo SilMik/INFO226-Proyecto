@@ -1,0 +1,13 @@
+/*Hoja de estilos de mapa*/
+#map{
+	height: 400px;
+	width: 750px;
+}
+
+#marcador{
+	/*debo alinearlo hacia la izquierda!! */
+	/*float:left;*/
+	margin-top: 10px;
+	display: inline-block;
+
+}

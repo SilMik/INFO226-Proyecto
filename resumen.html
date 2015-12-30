@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Resumen</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!--Bootstrap!!!-->
+  <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+  <link rel="stylesheet" type="text/css" href="estilo.css">
+  <!-- GOOGLE MAP-->
+  <script src="http://map.google.com/maps/api/js?sensor=false"></script>
+  <!--JQUERY-->
+  <script src="jquery-2.1.4.min.js"></script>
+   <!--Archivo JS-->
+  <script type="text/javascript" src="mapa.js"></script>
+ 
+  
+</head>
+<body>
+  <div class="page-header"> <!--div para titulo-->
+    <h1>Resumen emergencia <small>Bomberos de Valdivia al servicio de la comunidad</small></h1>
+  </div>
+  <div class="container">
+    <div id="map" class="col-xs-2 col-md-6">
+      <script type="text/javascript">initMap();</script> 
+    </div>
+    <div>
+      <div class="col-xs-8 col-md-4">
+        <div class="panel panel-danger">
+          <div class="panel-heading">
+            <h1 class="panel-title">Resumen Emergencia Activa</h1>
+          </div>
+          <div class="panel-body">
+            <p>Resumen de la información proporcionada para la emergencia en desarrollo.</p>
+            <ul class="list-group">
+              <!--acceder a la base de datos y desplegar la información-->
+              <li class="list-group-item">Calle:</li>
+              <li class="list-group-item">Calle/Esquina:</li>
+              <li class="list-group-item">Sector:</li>
+              <li class="list-group-item">Población:</li>
+              <li class="list-group-item">Punto de Referencia:</li>
+              <li class="list-group-item">N° de Contacto:</li>
+              <li class="list-group-item">Código:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-6 col-md-8">
+      <div class="panel panel-primary">
+        <div class="panel-heading">Máquinas a Despachar</div>
+        <!--Desplegar lista de máquinas existentes, valores cercania
+        dependen de las direcciones desplegadas en el formulario y la comparacion con la
+        base de datos y valor de disponibilidad depende de la informacion otorgada en emergencia activa-->
+        <form role="form" action="" method="POST" enctype="multipart/form-data"><!--definir action-->
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>N° Compañia</th>
+                <th>Especialidad Carro</th>
+                <th>Disponibilidad</th>
+                <th>Cercanía</th>
+                <th>Seleccionar</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Rescate</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>
+                  <div class="checkbox">
+                    <!--<label>-->
+                      <input type="checkbox" value="">
+                    <!--</label>-->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Rescate</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>
+                  <div class="checkbox">
+                    <!--<label>-->
+                      <input type="checkbox" value="">
+                    <!--</label>-->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Rescate</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>
+                  <div class="checkbox">
+                    <!--<label>-->
+                      <input type="checkbox" value="" aling="center">
+                    <!--</label>-->
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>Rescate</td>
+                <td>Si</td>
+                <td>Si</td>
+                <td>
+                  <div class="checkbox">
+                    <!--<label>-->
+                      <input type="checkbox" value="">
+                    <!--</label>-->
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-xs-6 col-md-8 col-md-offset-1">
+    <!--al aceptar asocia la maquina a la emergencia segun el checkbox seleccionado y
+    debe enviar un link  a ventana principal para
+    agregarlo a la lista emergencias activas-->
+    <button type="submit" class="btn btn-default">Aceptar</button>
+  </div>
+  <div id="output"  class="col-xs-6 col-md-8 col-md-offset-1"> soy un output!</div>
+</body>
+</html>
